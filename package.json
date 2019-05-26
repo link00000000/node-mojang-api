@@ -7,6 +7,9 @@
   "author": "link00000000 <crandall.logan@gmail.com>",
   "license": "GPL-3.0",
   "scripts": {
-      "travis": "node test/index.js"
+    "travis": "node test/index.js"
+  },
+  "devDependencies": {
+    "ava": "^1.4.1"
   }
 }
