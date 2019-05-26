@@ -1,0 +1,9 @@
+{
+  "name": "node-mojang-api",
+  "version": "1.0.0",
+  "description": "Unofficial Node.JS lib for Mojang and Minecraft APIs",
+  "main": "index.js",
+  "repository": "git@github.com:link00000000/node-mojang-api.git",
+  "author": "link00000000 <crandall.logan@gmail.com>",
+  "license": "GPL-3.0"
+}
