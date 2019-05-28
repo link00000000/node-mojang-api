@@ -1,7 +1,7 @@
 const test = require("ava");
-require('dotenv').config();
+require("dotenv").config();
 
-const Authentication = require('../lib/Authentication');
+const Authentication = require("../lib/Authentication");
 
 test("Authentication/constructor", t => {
     let client = new Authentication(process.env.EMAIL, process.env.PASSWORD);
