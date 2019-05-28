@@ -10,6 +10,13 @@ test("Authentication/constructor", t => {
 
 test("Authentication/authenticate", async t => {
     let client = new Authentication(process.env.EMAIL, process.env.PASSWORD);
-    let res = await client.authenticate();
+    await client.authenticate();
+    t.pass();
+});
+
+test("Authentication/refresh", async t => {
+    let client = new Authentication(process.env.EMAIL, process.env.PASSWORD);
+    await client.authenticate();
+    // await client.refresh();
     t.pass();
 });
