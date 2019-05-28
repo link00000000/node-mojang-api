@@ -13,5 +13,9 @@
   "devDependencies": {
     "ava": "^1.4.1",
     "documentation": "^11.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "request": "^2.88.0"
   }
 }
