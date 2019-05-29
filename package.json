@@ -7,12 +7,13 @@
   "author": "link00000000 <crandall.logan@gmail.com>",
   "license": "GPL-3.0",
   "scripts": {
-    "test": "ava --verbose",
+    "test": "export OFFLINE=true; ava --verbose",
     "docs": "documentation build index.js lib/** -f html -o docs"
   },
   "devDependencies": {
     "ava": "^1.4.1",
-    "documentation": "^11.0.0"
+    "documentation": "^11.0.0",
+    "nock": "^10.0.6"
   },
   "dependencies": {
     "dotenv": "^8.0.0",
