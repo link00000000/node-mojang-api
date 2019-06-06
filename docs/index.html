@@ -49,6 +49,24 @@
                       <li class='h5'><span>Instance members</span></li>
                       
                       <li><a
+                        href='#authenticationaccesstoken'
+                        class='regular pre-open'>
+                        #accessToken
+                      </a></li>
+                      
+                      <li><a
+                        href='#authenticationname'
+                        class='regular pre-open'>
+                        #name
+                      </a></li>
+                      
+                      <li><a
+                        href='#authenticationid'
+                        class='regular pre-open'>
+                        #id
+                      </a></li>
+                      
+                      <li><a
                         href='#authenticationauthenticate'
                         class='regular pre-open'>
                         #authenticate
@@ -134,11 +152,39 @@
               
                 
                 <li><a
-                  href='#realms'
+                  href='#realmsworld'
                   class="">
-                  Realms
+                  RealmsWorld
                   
                 </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#realms'
+                  class=" toggle-sibling">
+                  Realms
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#realmsgetworlds'
+                        class='regular pre-open'>
+                        #getWorlds
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
                 
                 </li>
               
@@ -290,6 +336,171 @@ authentication server</p>
     <div class='py1 quiet mt1 prose-big'>Instance Members</div>
     <div class="clearfix">
   
+    <div class='border-bottom' id='authenticationaccesstoken'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>accessToken</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Access token of client object</p>
+
+    <div class='pre p1 fill-light mt0'>accessToken</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        access token
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='authenticationname'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>name</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Name of client object</p>
+
+    <div class='pre p1 fill-light mt0'>name</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        client name
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='authenticationid'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>id</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>ID of client object</p>
+
+    <div class='pre p1 fill-light mt0'>id</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        client id
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
     <div class='border-bottom' id='authenticationauthenticate'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
@@ -393,7 +604,7 @@ authentication server</p>
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
-        
+        access token
 
       
     
@@ -887,6 +1098,162 @@ authentication server</p>
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='realmsworld'>
+      RealmsWorld
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a Minecraft world hosted on Minecraft Realms</p>
+
+    <div class='pre p1 fill-light mt0'>RealmsWorld</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>id</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : The ID of the world
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>owner</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          : The owner of the world
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>ownerUUID</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          : The unique ID of the owner, note: UUID does not have hyphens
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>name</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          : The name of the world
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>motd</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          : The MOTD of the server, does not support color
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>state</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          : The status of the server, can be one of the following: ADMIN_LOCK, CLOSED, OPEN, UNITIALIZED
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>daysLeft</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : How many days are left of subscription. Always '0' if not owner and returns '-1' if expired
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>expired</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</code>
+          : Whether the subscription has expired
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>expiredTrial</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</code>
+          : Whether the trial subscription has expired
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>worldType</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          : Type of the world, can be one of the following: NORMAL, MINIGAME, ADVENTUREMAP, EXPERIENCE, INSPIRATION
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>minigameName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          : The name of the minigame that is currently active, null if not in a minigame
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>minigameId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : The unique ID of the minigame, null if not in minigame
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>minigameImage</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          : base64 of the current minigame image in the format PNG, null if not in minigame
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>activeSlot</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : Current server world (1-4)
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='realms'>
       Realms
     </h3>
@@ -897,7 +1264,7 @@ authentication server</p>
 
   <p>Class representing a client connected to Minecraft Realms</p>
 
-    <div class='pre p1 fill-light mt0'>new Realms(auth: any, null-null: <a href="#authentication">Authentication</a>)</div>
+    <div class='pre p1 fill-light mt0'>new Realms(auth: <a href="#authentication">Authentication</a>)</div>
   
   
 
@@ -914,16 +1281,8 @@ authentication server</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>auth</span> <code class='quiet'>(any)</code>
-	    
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>null-null</span> <code class='quiet'>(<a href="#authentication">Authentication</a>)</code>
-	    a valid authentication client
+            <span class='code bold'>auth</span> <code class='quiet'>(<a href="#authentication">Authentication</a>)</code>
+	    a valid authenticated authentication client
 
           </div>
           
@@ -941,6 +1300,67 @@ authentication server</p>
   
 
   
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='realmsgetworlds'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>getWorlds()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Sets and returns list of worlds that the authenticated user has access to on Minecraft Realms</p>
+
+    <div class='pre p1 fill-light mt0'>getWorlds(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#realmsworld">RealmsWorld</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#realmsworld">RealmsWorld</a>></code>:
+        Array of RealmsWorld objects
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
 
   
 

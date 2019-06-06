@@ -26,7 +26,6 @@ test("Authentication/authenticate", async t => {
 
     let auth = new Authentication(process.env.EMAIL, process.env.PASSWORD, path.join(__dirname, "authenticate.js.client.json"));
     let res = await auth.authenticate();
-    console.log(res);
     t.pass();
 
 });

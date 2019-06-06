@@ -1,5 +1,6 @@
 {
     "AUTH_SERVER": "https://authserver.mojang.com",
-
-    "CLIENT_TOKEN": "node-mojang-api"
+    "REALMS_SERVER": "https://pc.realms.minecraft.net",
+    "CLIENT_TOKEN": "node-mojang-api",
+    "VERSION": "1.14.2"
 }

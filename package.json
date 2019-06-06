@@ -11,7 +11,7 @@
     "docs": "documentation build index.js lib/** -f html -o docs"
   },
   "devDependencies": {
-    "ava": "^1.4.1",
+    "ava": "^2.0.0",
     "documentation": "^11.0.0",
     "nock": "^10.0.6"
   },
