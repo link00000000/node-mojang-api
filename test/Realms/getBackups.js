@@ -32,6 +32,32 @@ test("Realms/getWorlds", async t => {
                 return [403];
             });
         nock(REALMS_SERVER)
+            .get("/worlds").reply((uri, req) => {
+                console.log(req);
+                return {
+                    "servers":[{
+                        "id":1,
+                        "remoteSubscriptionId":"aaaa0000bbbb1111cccc2222dddd3333",
+                        "owner":"j_selby",
+                        "ownerUUID":"3333dddd2222cccc1111bbbb0000aaaa",
+                        "name":"A Test Server",
+                        "motd":"This is a testing server!",
+                        "state":"OPEN",
+                        "daysLeft":30,
+                        "expired":false,
+                        "expiredTrial":false,
+                        "worldType":"NORMAL",
+                        "players":["Notch"],
+                        "maxPlayers":10,
+                        "minigameName":null,
+                        "minigameId":null,
+                        "minigameImage":null,
+                        "activeSlot":1,
+                        "slots":null,
+                        "member":false
+                    }]
+                }
+            })
             .get(/\/worlds\/\d*\/backups/).reply((uri, req) => {
                 console.log(req);
                 return {
