@@ -67,11 +67,12 @@ test("Realms/getWorlds", async t => {
             });
     }
 
-    let auth = new Auth(process.env.EMAIL, process.env.PASSWORD, path.join(__dirname, "getIP.js.client.json"));
+    let auth = new Auth(process.env.EMAIL, process.env.PASSWORD, path.join(__dirname, "hasPendingUpdate.js.client.json"));
     await auth.authenticate();
     let realms = new Realms(auth);
     let worlds = await realms.getWorlds();
-    let ip = await realms.getIP(worlds[0]);
+    let hasPendingUpdate = await realms.hasPendingUpdate(worlds[0]);
+    console.log(hasPendingUpdate);
     t.pass();
 
 });
