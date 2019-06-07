@@ -13,6 +13,7 @@ test("Realms/getWorlds", async t => {
     if(process.env.OFFLINE)
     {
         nock(AUTH_SERVER)
+            .persist()
             .post("/authenticate").reply((uri, req) => {
                 return {
                     accessToken: "ACCESS_TOKEN",
