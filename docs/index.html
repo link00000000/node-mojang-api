@@ -142,19 +142,49 @@
               
                 
                 <li><a
-                  href='#status'
-                  class="">
-                  status
-                  
+                  href='#mojang'
+                  class=" toggle-sibling">
+                  Mojang
+                  <span class='icon'>▸</span>
                 </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  <ul class='list-reset py1-ul pl1'>
+                    <li class='h5'><span>Static members</span></li>
+                    
+                      <li><a
+                        href='#mojangstatus'
+                        class='regular pre-open'>
+                        .status
+                      </a></li>
+                    
+                      <li><a
+                        href='#mojanggetuuid'
+                        class='regular pre-open'>
+                        .getUUID
+                      </a></li>
+                    
+                      <li><a
+                        href='#mojanggetnamehistory'
+                        class='regular pre-open'>
+                        .getNameHistory
+                      </a></li>
+                    
+                    </ul>
+                  
+                  
+                  
+                  
+                </div>
                 
                 </li>
               
                 
                 <li><a
-                  href='#getuuid'
+                  href='#namehistoryinstance'
                   class="">
-                  getUUID
+                  NameHistoryInstance
                   
                 </a>
                 
@@ -1118,12 +1148,51 @@ authentication server</p>
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='status'>
-      status
+    <h3 class='fl m0' id='mojang'>
+      Mojang
     </h3>
     
     
   </div>
+  
+
+  <p>a module that contains miscellaneous endpoint wrappers for Mojang APIs</p>
+
+    <div class='pre p1 fill-light mt0'>Mojang</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Static Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='mojangstatus'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>status()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
   
 
   <p>Checks the status of all mojang servers</p>
@@ -1166,20 +1235,19 @@ authentication server</p>
   
 </section>
 
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
+      </div>
+    </div>
   
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='getuuid'>
-      getUUID
-    </h3>
-    
-    
-  </div>
+    <div class='border-bottom' id='mojanggetuuid'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>getUUID(username, timestamp)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
   
 
   <p>Gets the UUID of the user of a specified username</p>
@@ -1231,6 +1299,161 @@ authentication server</p>
 
       
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='mojanggetnamehistory'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>getNameHistory(uuid)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Gets the history of names used by a user of a specified UUID</p>
+
+    <div class='pre p1 fill-light mt0'>getNameHistory(uuid: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#namehistoryinstance">NameHistoryInstance</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>uuid</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    THe uuid of the Minecraft Account
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#namehistoryinstance">NameHistoryInstance</a>></code>:
+        An array containing the past names of a user
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='namehistoryinstance'>
+      NameHistoryInstance
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a container for Minecraft name history instances</p>
+
+    <div class='pre p1 fill-light mt0'>NameHistoryInstance</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>name</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          : The username of the account
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>changedToAt</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?)</code>
+          : The (java) timestamp the username was changed to the associated username. This value is absent for the original username
+
+          
+        </div>
+      
+    </div>
+  
+
   
 
   
