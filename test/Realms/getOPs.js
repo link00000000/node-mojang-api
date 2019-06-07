@@ -8,7 +8,7 @@ const path = require("path");
 const Auth = require("../../lib/Authentication");
 const Realms = require("../../lib/Realms");
 
-test("Realms/getIP", async t => {
+test("Realms/getOps", async t => {
 
     if(process.env.OFFLINE)
     {
@@ -57,19 +57,16 @@ test("Realms/getIP", async t => {
                     }]
                 }
             })
-            .get(/\/worlds\/v1\/\d*\/join\/pc/).reply((uri, req) => {
-                return {
-                    address: "0.0.0.0",
-                    pendingUpdate: false
-                }
+            .get(/\/ops\/\d*/).reply((uri, req) => {
+                return { ops: [ "userOne", "userTwo", "userThree" ] }
             });
     }
 
-    let auth = new Auth(process.env.EMAIL, process.env.PASSWORD, path.join(__dirname, "getIP.js.client.json"));
+    let auth = new Auth(process.env.EMAIL, process.env.PASSWORD, path.join(__dirname, "getOPs.js.client.json"));
     await auth.authenticate();
     let realms = new Realms(auth);
     let worlds = await realms.getWorlds();
-    let ip = await realms.getIP(worlds[0]);
+    let ops = await realms.getOPs(worlds[0]);
     t.pass();
 
 });

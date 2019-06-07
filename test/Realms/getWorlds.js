@@ -32,7 +32,6 @@ test("Realms/getWorlds", async t => {
             });
         nock(REALMS_SERVER)
             .get("/worlds").reply((uri, req) => {
-                console.log(req);
                 return {
                     "servers":[{
                         "id":1,

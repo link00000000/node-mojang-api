@@ -8,7 +8,7 @@ const path = require("path");
 const Auth = require("../../lib/Authentication");
 const Realms = require("../../lib/Realms");
 
-test("Realms/getWorlds", async t => {
+test("Realms/getBackups", async t => {
 
     if(process.env.OFFLINE)
     {
@@ -33,7 +33,6 @@ test("Realms/getWorlds", async t => {
             });
         nock(REALMS_SERVER)
             .get("/worlds").reply((uri, req) => {
-                console.log(req);
                 return {
                     "servers":[{
                         "id":1,
@@ -59,7 +58,6 @@ test("Realms/getWorlds", async t => {
                 }
             })
             .get(/\/worlds\/\d*\/backups/).reply((uri, req) => {
-                console.log(req);
                 return {
                     "backups": [
                         {

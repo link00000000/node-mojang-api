@@ -8,7 +8,7 @@ const path = require("path");
 const Auth = require("../../lib/Authentication");
 const Realms = require("../../lib/Realms");
 
-test("Realms/getWorlds", async t => {
+test("Realms/getDownload", async t => {
 
     if(process.env.OFFLINE)
     {
@@ -68,7 +68,7 @@ test("Realms/getWorlds", async t => {
             });
     }
 
-    let auth = new Auth(process.env.EMAIL, process.env.PASSWORD, path.join(__dirname, "getWorlds.js.client.json"));
+    let auth = new Auth(process.env.EMAIL, process.env.PASSWORD, path.join(__dirname, "getDownload.js.client.json"));
     await auth.authenticate();
     let realms = new Realms(auth);
     let worlds = await realms.getWorlds();

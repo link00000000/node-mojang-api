@@ -8,7 +8,7 @@ const path = require("path");
 const Auth = require("../../lib/Authentication");
 const Realms = require("../../lib/Realms");
 
-test("Realms/getWorlds", async t => {
+test("Realms/hasPendingUpdate", async t => {
 
     if(process.env.OFFLINE)
     {
@@ -33,7 +33,6 @@ test("Realms/getWorlds", async t => {
             });
         nock(REALMS_SERVER)
             .get("/worlds").reply((uri, req) => {
-                console.log(req);
                 return {
                     "servers":[{
                         "id":1,
@@ -59,7 +58,6 @@ test("Realms/getWorlds", async t => {
                 }
             })
             .get(/\/worlds\/v1\/\d*\/join\/pc/).reply((uri, req) => {
-                console.log(req);
                 return {
                     address: "0.0.0.0",
                     pendingUpdate: false
@@ -72,7 +70,6 @@ test("Realms/getWorlds", async t => {
     let realms = new Realms(auth);
     let worlds = await realms.getWorlds();
     let hasPendingUpdate = await realms.hasPendingUpdate(worlds[0]);
-    console.log(hasPendingUpdate);
     t.pass();
 
 });
