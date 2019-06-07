@@ -172,6 +172,16 @@
               
                 
                 <li><a
+                  href='#realmssubscription'
+                  class="">
+                  RealmsSubscription
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#realms'
                   class=" toggle-sibling">
                   Realms
@@ -218,6 +228,12 @@
                         href='#realmsgetops'
                         class='regular pre-open'>
                         #getOPs
+                      </a></li>
+                      
+                      <li><a
+                        href='#realmsgetsubscription'
+                        class='regular pre-open'>
+                        #getSubscription
                       </a></li>
                       
                     </ul>
@@ -1423,6 +1439,85 @@ authentication server</p>
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='realmssubscription'>
+      RealmsSubscription
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a container for a Minecraft Realms subscription</p>
+
+    <div class='pre p1 fill-light mt0'>RealmsSubscription</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>startDate</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : Timestamp of when the subscription was started
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>daysLeft</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          : Number of days left before the subscription renews, -1 if the subscription is inactive
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>subscriptionType</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          : The type of subscription, can be one of the following: NORMAL, RECURRING
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='realms'>
       Realms
     </h3>
@@ -1853,6 +1948,75 @@ authentication server</p>
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>></code>:
         A list of operators names
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='realmsgetsubscription'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>getSubscription(world)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Gets information about the Minecraft Realms subscription</p>
+
+    <div class='pre p1 fill-light mt0'>getSubscription(world: <a href="#realmsworld">RealmsWorld</a>): <a href="#realmssubscription">RealmsSubscription</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>world</span> <code class='quiet'>(<a href="#realmsworld">RealmsWorld</a>)</code>
+	    A Minecraft Realms world object
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#realmssubscription">RealmsSubscription</a></code>:
+        Information about the Minecraft Realms subscription
 
       
     
