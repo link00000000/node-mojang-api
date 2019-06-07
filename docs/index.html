@@ -171,6 +171,12 @@
                         .getNameHistory
                       </a></li>
                     
+                      <li><a
+                        href='#mojanggetskin'
+                        class='regular pre-open'>
+                        .getSkin
+                      </a></li>
+                    
                     </ul>
                   
                   
@@ -185,6 +191,36 @@
                   href='#namehistoryinstance'
                   class="">
                   NameHistoryInstance
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#texturescontainer'
+                  class="">
+                  TexturesContainer
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#skincontainer'
+                  class="">
+                  SkinContainer
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#capecontainer'
+                  class="">
+                  CapeContainer
                   
                 </a>
                 
@@ -1349,7 +1385,7 @@ authentication server</p>
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>uuid</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    THe uuid of the Minecraft Account
+	    The unhyphenated UUID of the Minecraft account
 
           </div>
           
@@ -1365,6 +1401,75 @@ authentication server</p>
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#namehistoryinstance">NameHistoryInstance</a>></code>:
         An array containing the past names of a user
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='mojanggetskin'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>getSkin(uuid)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Gets the URL to the cape and skin textures of the specified user</p>
+
+    <div class='pre p1 fill-light mt0'>getSkin(uuid: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="#texturescontainer">TexturesContainer</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>uuid</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The unhypenated UUID of the Minecraft account
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#texturescontainer">TexturesContainer</a></code>:
+        The textures associated with the specified account
 
       
     
@@ -1447,6 +1552,215 @@ authentication server</p>
         <div class='space-bottom0'>
           <span class='code bold'>changedToAt</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?)</code>
           : The (java) timestamp the username was changed to the associated username. This value is absent for the original username
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='texturescontainer'>
+      TexturesContainer
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a container for Minecraft account textures</p>
+
+    <div class='pre p1 fill-light mt0'>TexturesContainer</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>skin</span> <code class='quiet'>(<a href="#skincontainer">SkinContainer</a>)</code>
+          : Data about a minecraft skin
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>cape</span> <code class='quiet'>(<a href="#capecontainer">CapeContainer</a>)</code>
+          : Data about a minecraft cape
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='skincontainer'>
+      SkinContainer
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a container for Minecraft skin data</p>
+
+    <div class='pre p1 fill-light mt0'>SkinContainer</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>url</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          : The url to the skin texture
+
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>model</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          : The model type of the skin, can be one of the following: normal, slim
+
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='capecontainer'>
+      CapeContainer
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>a container for Minecraft cape data</p>
+
+    <div class='pre p1 fill-light mt0'>CapeContainer</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>url</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          : The url to the cape texture
 
           
         </div>

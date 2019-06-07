@@ -16,6 +16,7 @@
     "nock": "^10.0.6"
   },
   "dependencies": {
+    "atob": "^2.1.2",
     "dotenv": "^8.0.0",
     "request": "^2.88.0"
   }
